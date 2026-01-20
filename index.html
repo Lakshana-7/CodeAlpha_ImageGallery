@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <!-- Link your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>My Image Gallery</h2>
+
+<!-- Step 1: Filter buttons (optional, you can keep or remove) -->
+<div class="buttons">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+</div>
+
+<!-- Step 2: Paste your gallery images here -->
+<div class="gallery">
+  <img src="images/1.jpg" class="img nature" onclick="openLightbox(0)">
+  <img src="images/2.jpg" class="img city" onclick="openLightbox(1)">
+  <img src="images/3.jpg" class="img nature" onclick="openLightbox(2)">
+  <img src="images/4.jpg" class="img city" onclick="openLightbox(3)">
+</div>
+
+<!-- Step 3: Lightbox popup (don’t move this) -->
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <button onclick="prevImg()">❮</button>
+  <img id="lightboxImg">
+  <button onclick="nextImg()">❯</button>
+</div>
+
+<!-- Step 4: Link your JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
